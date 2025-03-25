@@ -1,49 +1,48 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Contacto</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto – Mirada al Cosmos</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="Images/logo2.png">
+  <style>
+   
+  </style>
 </head>
 <body>
-    <div id="navbar">
-        <a class="active" href="contacto.html">Contacto</a>
-        <a href="/biografia.html">Acerca de</a>
-        <a href="index.html">Inicio</a>
-        <img src="Images/logo2.png" style="width: 50px; height: 50px; float: left;" id="logo">
-        </div>
-    <section class="contacto">
-        <div class="contacto-leo" style="display: flex; align-items: flex-start; gap: 20px;">
-            <div>
-                <h1>Contacto</h1>
-                <p>¿Quieres saber más sobre astrofotografía? ¿Te gustaría compartir<br>
-                    tus experiencias bajo las estrellas? ¿Tienes alguna duda o<br>
-                    sugerencia para Leo? ¡Escríbenos! <br>
-                    <br>
-                    Para consultas, colaboraciones o solicitudes de prensa, por favor<br>
-                    completa el siguiente formulario. Nos pondremos en contacto<br>
-                    contigo a la brevedad.</p>
-                <form action="/contacto.php" method="get">
-                    <label for="nombre">Nombre:</label><br>
-                    <input type="text" id="nombre" name="nombre"><br>
-                    <label for="email">Email:</label><br>
-                    <input type="email" id="email" name="email"><br>
-                    <label for="mensaje">Mensaje:</label><br>
-                    <textarea id="mensaje" name="mensaje" rows="4" cols="50"></textarea><br>
-                    <input type="submit" value="Enviar">
-                </form>
-                <br>    
-                <div class="redes-sociales" style="display: flex; gap: 10px;">
-                    <a href="https://www.facebook.com/leoandradaphotography" target="_blank"><img src="Images/facebook.png" alt="Facebook"></a>
-                    <a href="https://www.instagram.com/leoandradaphotography/" target="_blank"><img src="Images/instagram.png" alt="Instagram"></a>
-                    <a href="https://twitter.com/leoandradaphoto" target="_blank"><img src="Images/twitter.png" alt="Twitter"></a>
-                </div>
-            </div>
-        </div>
+  <header>
+    <nav id="navbar">
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <a class="active" href="contacto.html">Contacto</a>
+      <a href="biografia.html">Acerca de</a>
+      <a href="index.html">Inicio</a>
+      <img src="Images/logo2.png" style="width: 50px; height: 50px; float: left;" id="logo">
+    </nav>
+  </header>
+
+  <main>
+    <section class="contacto-section">
+      <h2>Contacto</h2>
+      <p>¿Tienes preguntas, propuestas o simplemente quieres saludar a Leo? ¡Escríbele!</p>
+      <form action="#" method="POST">
+        <input type="text" name="nombre" placeholder="Tu nombre" required>
+        <input type="email" name="correo" placeholder="Tu correo electrónico" required>
+        <textarea name="mensaje" rows="5" placeholder="Tu mensaje" required></textarea>
+        <button type="submit">Enviar mensaje</button>
+      </form>
     </section>
-</body>
-<footer>
+  </main>
+
+  <footer>
     <p>© Cristian Tito</p>
-</footer>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      var navbar = document.getElementById("navbar");
+      navbar.classList.toggle("responsive");
+    }
+  </script>
+</body>
 </html>
