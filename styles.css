@@ -13,42 +13,7 @@
     font-style: normal;
   }
 
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #0a0a23;
-    font-size: 16px;
-    color: white;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    padding: 20px;
-    background-color: #3F51B5;
-}
-
-h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-size: 42px;
-    color: #FFFFFF;
-    margin: 0;
-}
-
-h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-size: 32px;
-    color: #FFFFFF;
-    margin: 0;
-}
-p {
-    font-family: 'Roboto', sans-serif;
-    font-size: 17px;
-}
-
-#navbar {
+  #navbar {
     position: sticky;
     top: 0;
     overflow: hidden;
@@ -74,8 +39,8 @@ p {
     background-color: #7C4DFF;
     color: white;
   }
-  
 
+  
   /* Estilos para la sección de video */
 .video-section {
     position: relative;
@@ -108,7 +73,171 @@ p {
     font-weight: bold;
   }
 
-  footer {
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #0a0a23;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 20px;
+    background-color: #3F51B5;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-size: 42px;
+    color: #3F51B5;
+    margin: 0;
+    text-align: center;
+}
+
+.biografia-header h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-size: 42px;
+  color: #FFFFFF;
+  margin: 0;
+  text-align: center;
+}
+
+.biografia-header h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-size: 24px;
+  color: #C5CAE9;
+  margin: 0;
+  text-align: center;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-size: 32px;
+    color: #3F51B5;
+    margin: 0;
+}
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    color: #212121;
+}
+.info {
+    text-align: left;
+    background-color: #C5CAE9;
+    color: #C5CAE9;
+    padding: 20px;
+    text-align: left;}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
+    background-color: #FFFFFF;
+    color: #C5CAE9;
+    text-align: center;
+    align-items: center; /* Centra el contenido verticalmente */
+    justify-items: center; /* Centra el contenido horizontalmente */
+}
+.galeria3 {
+  padding: 20px;
+  background-color: #3F51B5;
+  color: #C5CAE9;
+  text-align: center;
+}
+
+.galeria3 h1 {
+  margin-bottom: 20px;
+  color: #FFFFFF;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 20px;
+  align-items: center;
+  justify-items: center;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+.conoce-a-leo {
+    text-align: left;
+    background-color: #C5CAE9;
+    color: #3F51B5;
+    padding: 20px;
+    text-align: left;
+}
+
+.eventos-section {
+      background-color: #3b43a2; /* Color azul similar al de la imagen */
+      color: #d3ccaf; /* Texto en tono beige/dorado */
+      padding: 60px 20px;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: left;
+      max-width: 800px;
+      margin: 0 auto;
+}
+
+    
+.evento {
+      margin-bottom: 40px;      
+}
+    
+.evento .fecha {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 0.9rem;
+      color: #ffffff;
+}
+    
+.evento h3 {
+      font-size: 1.5rem;
+      color: #d3ccaf;
+      margin: 10px 0;
+      font-weight: bold;
+}
+    
+.evento .lugar {
+      font-size: 1rem;
+      color: #ffffff;
+}
+    
+.evento hr {
+      border: none;
+      border-top: 1px solid #ffffff;
+      margin-top: 20px;
+}
+    
+.acerca-de {
+    text-align: left;
+    background-color: #C5CAE9;
+    color: #C5CAE9;
+    padding: 20px;
+    text-align: left;}
+
+.biografia {
+      background-color: #C5CAE9;
+      color: #FFFFFF;
+      padding: 20px;
+      text-align: left;}
+
+.bio-foto {
+      float: left;
+      margin-right: 20px;
+      margin-bottom: 20px;
+}
+footer {
     background-color: #303F9F;
     font-family: 'Montserrat', sans-serif;
     color: white;
