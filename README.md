@@ -64,4 +64,10 @@ Ubicados en `script.js`:
 
 ---
 
+## 🌐 Sitio en línea
+
+Puedes ver el sitio publicado en:
+
+---
+
 ¡Gracias por visitar el cosmos! 🌠
