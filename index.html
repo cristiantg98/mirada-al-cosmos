@@ -1,27 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mirada al Cosmos</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" type="image/x-icon" href="Images/logo2.png">
-  <style>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mirada al cosmos</title>
+    <link rel="icon" type="image/x-icon" href="Images/logo2.png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <nav id="navbar">
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <div class="navbar-links">
+          <a class="active" href="contacto.html">Contacto</a>
+          <a href="biografia.html">Acerca de</a>
+          <a href="index.html">Inicio</a>
+          <img src="Images/logo2.png" alt="Logo">
+        </div>
+      </nav>
+    </header>
 
-  </style>
-</head>
-<body>
-  <header>
-    <nav id="navbar">
-      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-      <a class="active" href="contacto.html">Contacto</a>
-      <a href="biografia.html">Acerca de</a>
-      <a href="index.html">Inicio</a>
-      <img src="Images/logo2.png" alt="Logo de Mirada al Cosmos" class="logo" style="width: 50px; height: 50px; float: left;">
-    </nav>
-  </header>
-
-  <main>
     <section class="video-section">
       <div class="video-container">
         <video autoplay loop muted>
@@ -33,49 +31,54 @@
         </div>
       </div>
     </section>
-
-    <section class="info">
-      <div class="intro-leo" style="display: flex; flex-wrap: wrap; align-items: center; gap: 20px;">
-        <div style="flex: 1; min-width: 250px;">
-          <h1>Cuando las estrellas se alinean...</h1>
+    <main class="contenido">
+      <section class="info">
+        <div class="intro-leo">
+          <div>
+            <br>
+            <h1>Cuando las estrellas se alinean...</h1>
           <p>
             Mirada al Cosmos es el espacio digital personal de Leo Andrada, astrofotógrafo chileno, creado para compartir su visión única del universo. A través de su lente y su experiencia en los cielos del desierto de Atacama, Leo nos invita a contemplar la inmensidad del espacio desde la Tierra.
             <br><br>
             Este sitio está pensado tanto para quienes se inician en la astrofotografía como para apasionados avanzados que buscan inspiración y conocimiento. Aquí, Leo fusiona técnica, arte y emoción en una galería visual que revela la belleza oculta del cosmos. Además, comparte experiencias, consejos y reflexiones para inspirar, educar y fomentar la curiosidad por los fenómenos astronómicos que nos rodean.
           </p>
+          </div>
+          <div style="flex: 1; min-width: 250px">
+            <br>
+            <img src="Images/vialactea2.png" alt="Fotografía de la Vía Láctea" class="bio-foto">
+            <br>
+          </div>
         </div>
-        <div style="flex: 1; min-width: 250px;">
-          <img src="Images/via_lactea.png" alt="Fotografía de la Vía Láctea" class="bio-foto">
+      </section>
+
+      <section class="imagenes">
+        <div class="galeria-intro">
+          <br><br>
+          <h1>Algunas de las mejores imágenes de Leo</h1>
+          <br><br>
         </div>
-      </div>
-    </section>
-
-    <section class="galeria">
-      <div class="galeria-intro">
-        <h1>Algunas de las mejores imágenes de Leo</h1>
-        <div class="gallery">
-          <img src="Images/via lactea10.jpg" alt="Imagen de la Vía Láctea 1">
-          <img src="Images/via lactea9.jpg" alt="Imagen de la Vía Láctea 2">
+        <div class="galeria-imagenes">
+          <img src="Images/vialactea4.jpg" alt="Imagen 1">
+          <img src="Images/vialactea3.jpg" alt="Imagen 2">
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="galeria3">
-      <h1>Galería</h1>
-      <div class="gallery">
-        <img src="Images/via lactea8.jpg" alt="Imagen 1">
-        <img src="Images/via lactea7.jpg" alt="Imagen 2">
-        <img src="Images/via lactea6.jpg" alt="Imagen 3">
-        <img src="Images/via lactea5.jpg" alt="Imagen 4">
-        <img src="Images/via lactea4.jpg" alt="Imagen 5">
-        <img src="Images/via lactea3.jpg" alt="Imagen 6">
-      </div>
-    </section>
+      <section class="galeria2">
+        <h1>Galería</h1>
+        <div class="galeria-2">
+          <img src="Images/vialactea8.jpg" alt="Imagen 1">
+          <img src="Images/vialactea7.jpg" alt="Imagen 2">
+          <img src="Images/vialactea6.jpg" alt="Imagen 3">
+          <img src="Images/vialactea5.jpg" alt="Imagen 4">
+          <img src="Images/vialactea4.jpg" alt="Imagen 5">
+          <img src="Images/vialactea9.jpg" alt="Imagen 6">
+        </div>
+      </section>
 
-    <section class="acerca-de">
-      <div class="acerca-leo" style="display: flex; flex-wrap: wrap; align-items: center; gap: 20px;">
-        <div style="flex: 1; min-width: 250px;">
-          <h1>Sobre Leo</h1>
+      <section class="acerca-de">
+        <div class="acerca-leo">
+          <div style="flex: 1; min-width: 250px">
+            <h1>Sobre Leo</h1>
           <p>
             Leo Andrada es un reconocido astrofotógrafo chileno, nacido en San Pedro de Atacama. Durante más de una década ha capturado los cielos del desierto de Atacama, considerado uno de los mejores lugares del mundo para observar el firmamento.
             <br><br>
@@ -83,53 +86,53 @@
             <br><br>
             Sus fotografías han sido publicadas en revistas científicas, exposiciones internacionales y proyectos educativos sobre astronomía.
           </p>
+          </div>
+          <div style="flex: 1; min-width: 250px">
+            <img src="Images/Leo.png" alt="Retrato de Leo Andrada" class="bio-foto">
+          </div>
         </div>
-        <div style="flex: 1; min-width: 250px;">
-          <img src="Images/Leo.png" alt="Retrato de Leo Andrada" class="bio-foto">
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="eventos" class="eventos-section">
-      <h1 style="color: #fff;">Próximos Eventos</h1>
-      <article class="evento">
-        <p class="fecha">3 DE ABRIL 2025</p>
-        <h3>Fotografiar la Oscuridad</h3>
-        <p class="lugar">Centro Cultural Gabriela Mistral (GAM)</p>
-        <hr>
-      </article>
+      <section id="eventos" class="eventos-section">
+        <h1>Próximos Eventos</h1>
+        <article class="evento">
+          <p class="fecha">3 DE ABRIL 2025</p>
+          <h3>Fotografiar la Oscuridad</h3>
+          <p class="lugar">Centro Cultural Gabriela Mistral (GAM)</p>
+          <hr>
+        </article>
 
-      <article class="evento">
-        <p class="fecha">10 DE ABRIL DE 2025</p>
-        <h3>El Cielo Como Nunca lo Viste</h3>
-        <p class="lugar">Museo Interactivo Mirador (MIM), Santiago</p>
-        <hr>
-      </article>
+        <article class="evento">
+          <p class="fecha">10 DE ABRIL DE 2025</p>
+          <h3>El Cielo Como Nunca lo Viste</h3>
+          <p class="lugar">Museo Interactivo Mirador (MIM), Santiago</p>
+          <hr>
+        </article>
 
-      <article class="evento">
-        <p class="fecha">20 DE ABRIL DE 2025</p>
-        <h3>Secretos del Atacama</h3>
-        <p class="lugar">Observatorio ALMA, Desierto de Atacama</p>
-        <hr>
-      </article>
+        <article class="evento">
+          <p class="fecha">20 DE ABRIL DE 2025</p>
+          <h3>Secretos del Atacama</h3>
+          <p class="lugar">Observatorio ALMA, Desierto de Atacama</p>
+          <hr>
+        </article>
 
-      <article class="evento">
-        <p class="fecha">28 DE ABRIL DE 2025</p>
-        <h3>Componer el Infinito</h3>
-        <p class="lugar">Planetario de la Universidad de Santiago (USACH)</p>
-      </article>
-    </section>
-  </main>
+        <article class="evento">
+          <p class="fecha">28 DE ABRIL DE 2025</p>
+          <h3>Componer el Infinito</h3>
+          <p class="lugar">Planetario de la Universidad de Santiago (USACH)</p>
+        </article>
+      </section>
+    </main>
 
-  <footer>
-    <p>© Cristian Tito</p>
-  </footer>
+    <footer>
+      <p>© Cristian Tito</p>
+    </footer>
 
-  <script>
-    function toggleMenu() {
-      var navbar = document.getElementById("navbar");
-      navbar.classList.toggle("responsive");
-    }
-  </script>
-</body>
+    <script>
+      function toggleMenu() {
+        const links = document.querySelector('.navbar-links');
+        links.classList.toggle('active');
+      }
+    </script>
+  </body>
 </html>

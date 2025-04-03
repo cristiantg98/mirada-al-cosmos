@@ -5,29 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Biografía — Leo Andrada</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="Images/logo2.png">
 </head>
 <body>
-    <div id="navbar">
+  <header>
+    <nav id="navbar">
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <div class="navbar-links">
         <a class="active" href="contacto.html">Contacto</a>
-        <a href="/biografia.html">Acerca de</a>
+        <a href="biografia.html">Acerca de</a>
         <a href="index.html">Inicio</a>
-        <img src="Images/logo2.png" style="width: 50px; height: 50px; float: left;" id="logo">
-        </div>
-
-  <header class="biografia-header">
-    <h1>Biografía</h1>
-    <br>
-    <h2>Conoce a Leo Andrada, el alma detrás de Mirada al Cosmos</h2>
+        <img src="Images/logo2.png" alt="logo">
+      </div>
+    </nav>
   </header>
 
-  <main class="biografia">
-    <section class="bio-contenido">
-      <img src="/Images/Leo.png" alt="Leo Andrada" class="bio-foto">
-        <br>
-      <article>
-        <h2>Leo Andrada</h2>
-        <h3>Astrofotógrafo y divulgador chileno</h3>
-
+  <main>
+    <section class="biografia-section">
+      <h1>Biografía</h1>
+      <div class="biografia-contenido">
+        <img src="Images/Leo.png" alt="Retrato de Leo Andrada">
         <p>
           Mi nombre es <strong>Leo Andrada</strong> y nací en <em>San Pedro de Atacama</em>, uno de los lugares con los cielos más limpios y estrellados del planeta. Desde niño sentí una conexión especial con el universo. Pasaba horas mirando hacia arriba, fascinado por lo pequeño que me sentía ante tanta inmensidad.
         </p>
@@ -47,12 +44,19 @@
         <blockquote>
           “El cielo no es un techo. Es una ventana hacia lo que podemos imaginar.”
         </blockquote>
-      </article>
+      </div>
     </section>
   </main>
 
-</body>
-<footer>
+  <footer>
     <p>© Cristian Tito</p>
-</footer>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const links = document.querySelector('.navbar-links');
+      links.classList.toggle('active');
+    }
+  </script>
+</body>
 </html>

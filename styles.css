@@ -1,10 +1,9 @@
 /* ==================== */
 /*     FUENTES          */
 /* ==================== */
-
 @font-face {
   font-family: 'Roboto';
-  src: url('fonts/Roboto-VariableFont_wdth_wght.ttf') format('truetype');
+  src: url('fonts/Roboto-VariableFont_wdth,wght.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -19,12 +18,11 @@
 /* ==================== */
 /*     GENERALES        */
 /* ==================== */
-
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #0a0a23;
   font-size: 16px;
   color: white;
+  background-color: #3b43a2;
   margin: 0;
   padding: 0;
   text-align: center;
@@ -48,23 +46,27 @@ h2 {
 }
 
 p {
-  font-size: 17px;
+  font-size: 20px;
   color: #212121;
 }
 
 /* ==================== */
 /*     NAVBAR           */
 /* ==================== */
-
 #navbar {
-  position: sticky;  /* PORQUE NO FUNCIONAS */
-  top: 0;
-  z-index: 999;
   background-color: #303F9F;
+  padding: 10px;
+  position: relative;
+}
+
+.navbar-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 #navbar a {
-  float: right;
   display: block;
   color: #f2f2f2;
   text-align: center;
@@ -83,10 +85,24 @@ p {
   color: white;
 }
 
+#navbar img {
+  width: 50px;
+  margin-left: auto;
+}
+
+.menu-toggle {
+  display: none;
+  background-color: #303F9F;
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+}
+
 /* ==================== */
 /*     VIDEO            */
 /* ==================== */
-
 .video-section {
   position: relative;
   width: 100%;
@@ -94,9 +110,8 @@ p {
   overflow: hidden;
 }
 
-.video-section h1{
+.video-section h1 {
   color: white;
-
 }
 
 .video-container {
@@ -121,39 +136,37 @@ video {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   font-weight: bold;
 }
-.menu-toggle {
-  display: none;
-  background-color: #303F9F;
-  color: white;
-  border: none;
-  font-size: 24px;
-  padding: 10px;
-  cursor: pointer;
-}
-
-@media (max-width: 768px) {
-  #navbar a {
-    display: none;
-  }
-  #navbar.responsive a {
-    display: block;
-    text-align: center;
-    float: none;
-  }
-  .menu-toggle {
-    display: block;
-  }
-}
 
 /* ==================== */
 /*     INFO Y BIO       */
 /* ==================== */
-
 .info, .acerca-de, .conoce-a-leo {
   background-color: #C5CAE9;
   color: #1A237E;
   padding: 20px;
   text-align: left;
+}
+
+.intro-leo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.intro-leo > div {
+  flex: 1;
+  min-width: 250px;
+}
+
+
+.acerca-leo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
 }
 
 .bio-foto {
@@ -165,41 +178,67 @@ video {
   border-radius: 5%;
 }
 
+.imagenes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #ffffff;
+}
+
 /* ==================== */
 /*     GALERÍA          */
 /* ==================== */
+.galeria-imagenes {
+  padding: 20px;
+}
 
-.galeria3 {
+.galeria-imagenes img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 12px;
+  margin: 10px;
+}
+
+.galeria2 {
+  background-color: #3F51B5;
+  padding: 20px;
+}
+
+.galeria2 h1 {
+  margin-bottom: 20px;
+  color: #FFFFFF;
+}
+
+.galeria-2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  max-width: 1000px;
+  margin: auto;
   padding: 20px;
   background-color: #3F51B5;
   color: #C5CAE9;
   text-align: center;
 }
 
-.galeria3 h1 {
-  margin-bottom: 20px;
-  color: #FFFFFF;
-}
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px 0;
-  align-items: center;
-  justify-items: center;
-}
-
-.gallery img {
+.galeria-2 img {
   width: 100%;
-  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
   border-radius: 8px;
+}
+
+.galeria-2 img:nth-child(4),
+.galeria-2 img:nth-child(5) {
+  grid-row: span 2;
+  height: 100%;
 }
 
 /* ==================== */
 /*     EVENTOS          */
 /* ==================== */
-
 .eventos-section {
   background-color: #3b43a2;
   color: #d3ccaf;
@@ -207,7 +246,7 @@ video {
   font-family: 'Segoe UI', sans-serif;
   text-align: left;
   max-width: 800px;
-  margin: 0 auto;
+  margin: auto;
 }
 
 .evento {
@@ -221,6 +260,10 @@ video {
   color: #ffffff;
 }
 
+.eventos-section h1 {
+ color: #FFFFFF;
+
+}
 .evento h3 {
   font-size: 1.5rem;
   color: #d3ccaf;
@@ -242,89 +285,30 @@ video {
 /* ==================== */
 /*     FOOTER           */
 /* ==================== */
-
 footer {
   background-color: #303F9F;
   font-family: 'Montserrat', sans-serif;
-  color: white;
   text-align: left;
   padding: 10px;
   width: 100%;
 }
 
-/* ==================== */
-/*     RESPONSIVE       */
-/* ==================== */
-
-@media (max-width: 768px) {
-  .info2, .acerca-leo {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .bio-foto {
-    margin: 20px auto;
-  }
-
-  .gallery {
-    grid-template-columns: 1fr;
-  }
-
-  #navbar a {
-    float: none;
-    display: block;
-    text-align: center;
-  }
-
-/* Estilo global para el logo del header */
-.logo {
-  width: 50px;
-  height: 50px;
-  float: left;
-}
-
-/* Versión responsive para móviles */
-@media (max-width: 768px) {
-  .logo {
-    float: none;
-    display: block;
-    margin: 10px auto;
-    width: 40px;
-    height: 40px;
-  }
-}
-}
-
-.menu-toggle {
-  display: none;
-  background-color: #303F9F;
+footer p {
   color: white;
-  border: none;
-  font-size: 24px;
+  font-size: smaller;
   padding: 10px;
-  cursor: pointer;
+  margin: 0;
 }
 
-@media (max-width: 768px) {
-  #navbar a {
-    display: none;
-  }
-  #navbar.responsive a {
-    display: block;
-    text-align: center;
-    float: none;
-  }
-  .menu-toggle {
-    display: block;
-  }
-}
-
+/* ==================== */
+/*     CONTACTO         */
+/* ==================== */
 .contacto-section {
   background-color: #C5CAE9;
   padding: 40px;
   color: #1A237E;
   text-align: center;
+  padding-bottom: 250px;
 }
 
 .contacto-section h2 {
@@ -362,3 +346,112 @@ footer {
   background-color: #5C6BC0;
 }
 
+/* ==================== */
+/*     BIOGRAFÍA        */
+/* ==================== */
+.biografia-section {
+  background-color: #C5CAE9;
+  padding: 40px;
+  color: #1A237E;
+  text-align: center;
+}
+
+.biografia-section h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.biografia-contenido {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.biografia-contenido img {
+  max-width: 50%;
+  height: auto;
+  border-radius: 15px;
+  margin: 0 auto;
+  display: block;
+}
+
+.biografia-contenido p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  color: #212121;
+  line-height: 1.6;
+}
+
+blockquote {
+  font-style: italic;
+  color: #3F51B5;
+  font-size: 1.2rem;
+  margin: 20px 0;
+}
+
+/* ==================== */
+/*     RESPONSIVE       */
+/* ==================== */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    background-color: #303F9F;
+    width: 100%;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  #navbar a {
+    float: none;
+    text-align: left;
+    padding: 14px;
+  }
+
+  #navbar img {
+    float: none;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .overlay-text {
+    font-size: 1.2em;
+    left: 10px;
+  }
+
+  .galeria-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .bio-foto {
+    max-width: 100%;
+  }
+
+  .acerca-leo {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .evento {
+    text-align: center;
+  }
+
+  .eventos-section,
+  .contacto-section {
+    padding: 20px;
+  }
+
+  .biografia-contenido {
+    padding: 0 20px;
+  }
+}
